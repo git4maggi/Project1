@@ -1,0 +1,45 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <title>About | Hello, world!</title>
+  <style>
+    :root { color-scheme: dark; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    * { box-sizing: border-box; }
+    body { min-height: 100vh; margin: 0; display: grid; place-items: center; overflow-x: hidden; color: #f8fafc; background: #0b1020; padding: 6rem 1rem 2rem; }
+    body::before, body::after { content: ""; position: fixed; width: 34rem; height: 34rem; border-radius: 50%; filter: blur(100px); opacity: .32; z-index: -1; animation: drift 14s ease-in-out infinite alternate; }
+    body::before { top: -12rem; left: -8rem; background: #7c3aed; }
+    body::after { right: -10rem; bottom: -15rem; background: #0891b2; animation-delay: -7s; }
+    .site-nav { position: fixed; top: 1.25rem; right: 1.5rem; z-index: 2; display: flex; gap: .35rem; padding: .4rem; border: 1px solid rgb(255 255 255 / .14); border-radius: 999px; background: rgb(15 23 42 / .72); backdrop-filter: blur(14px); }
+    .site-nav a { padding: .55rem .85rem; border-radius: 999px; color: #cbd5e1; font-size: .9rem; text-decoration: none; transition: color .2s, background .2s; }
+    .site-nav a:hover, .site-nav a[aria-current="page"] { color: #fff; background: rgb(255 255 255 / .12); }
+    main { width: min(90vw, 760px); padding: clamp(2rem, 8vw, 5rem); text-align: center; border: 1px solid rgb(255 255 255 / .14); border-radius: 28px; background: rgb(255 255 255 / .07); box-shadow: 0 30px 100px rgb(0 0 0 / .4); backdrop-filter: blur(18px); }
+    .eyebrow { display: inline-flex; align-items: center; gap: .55rem; padding: .45rem .8rem; border: 1px solid rgb(255 255 255 / .16); border-radius: 999px; color: #c4b5fd; font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; }
+    .dot { width: .5rem; height: .5rem; border-radius: 50%; background: #a78bfa; box-shadow: 0 0 14px #a78bfa; }
+    h1 { margin: 1.5rem 0 1rem; font-size: clamp(3.3rem, 11vw, 6.5rem); line-height: .98; letter-spacing: -.075em; background: linear-gradient(110deg, #fff 15%, #c4b5fd 52%, #67e8f9 95%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    p { max-width: 38rem; margin: 0 auto 1rem; color: #cbd5e1; font-size: clamp(1rem, 2.5vw, 1.2rem); line-height: 1.75; }
+    .card { margin-top: 1.5rem; padding: 1.25rem; border: 1px solid rgb(255 255 255 / .12); border-radius: 18px; background: rgb(255 255 255 / .04); }
+    .card p { margin: 0; font-size: 1rem; }
+    a.inline-link { color: #a5f3fc; text-underline-offset: 4px; }
+    @keyframes drift { to { transform: translate(4rem, 3rem) scale(1.12); } }
+    @media (max-width: 480px) { .site-nav { top: .75rem; right: 50%; transform: translateX(50%); } main { padding: 2rem 1.25rem; } }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; } }
+  </style>
+</head>
+<body>
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html" aria-current="page">About</a>
+    <a href="contact.html" >Contact</a>
+  </nav>
+  <main>
+        <span class="eyebrow"><span class="dot" aria-hidden="true"></span> The story behind the page</span>
+    <h1>About<br>this place</h1>
+    <p>This little corner of the web is built around a simple idea: every great journey begins with a first step.</p>
+    <div class="card"><p>We love thoughtful design, curious minds, and turning bright ideas into something real. Thanks for being here at the start.</p></div>
+    <p style="margin-top:1.5rem"><a class="inline-link" href="contact.html">Have an idea? Let’s talk →</a></p>
+  </main>
+</body>
+</html>

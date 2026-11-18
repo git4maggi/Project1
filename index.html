@@ -12,6 +12,9 @@
     body::before, body::after { content: ""; position: fixed; width: 34rem; height: 34rem; border-radius: 50%; filter: blur(100px); opacity: .32; z-index: -1; animation: drift 14s ease-in-out infinite alternate; }
     body::before { top: -12rem; left: -8rem; background: #7c3aed; }
     body::after { right: -10rem; bottom: -15rem; background: #0891b2; animation-delay: -7s; }
+    .site-nav { position: fixed; top: 1.25rem; right: 1.5rem; z-index: 2; display: flex; gap: .35rem; padding: .4rem; border: 1px solid rgb(255 255 255 / .14); border-radius: 999px; background: rgb(15 23 42 / .72); backdrop-filter: blur(14px); }
+    .site-nav a { padding: .55rem .85rem; border-radius: 999px; color: #cbd5e1; font-size: .9rem; text-decoration: none; transition: color .2s, background .2s; }
+    .site-nav a:hover, .site-nav a[aria-current="page"] { color: #fff; background: rgb(255 255 255 / .12); }
     main { width: min(90vw, 760px); padding: clamp(2rem, 8vw, 5rem); text-align: center; border: 1px solid rgb(255 255 255 / .14); border-radius: 28px; background: rgb(255 255 255 / .07); box-shadow: 0 30px 100px rgb(0 0 0 / .4); backdrop-filter: blur(18px); }
     .eyebrow { display: inline-flex; align-items: center; gap: .55rem; padding: .45rem .8rem; border: 1px solid rgb(255 255 255 / .16); border-radius: 999px; color: #c4b5fd; font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; }
     .dot { width: .5rem; height: .5rem; border-radius: 50%; background: #a78bfa; box-shadow: 0 0 14px #a78bfa; }
@@ -26,6 +29,11 @@
   </style>
 </head>
 <body>
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
   <main>
     <span class="eyebrow"><span class="dot" aria-hidden="true"></span> A little something for the web</span>
     <h1>Hello,<br>world!</h1>
@@ -43,3 +51,5 @@
   </script>
 </body>
 </html>
+
+
